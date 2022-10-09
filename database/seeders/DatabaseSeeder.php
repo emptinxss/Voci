@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,54 +14,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //CUSTOM AUTHORS
 
-        DB::table('authors')->insert([
-            'name' => 'Emma',
-            'surname' => 'Miller'
-        ]);
-        DB::table('authors')->insert([
-            'name' => 'Mia',
-            'surname' => 'Jackson'
-        ]);
+        $this->call(AuthorsSeeder::class);
+        $this->command->info('Authors table seeded!');
 
-        // CUSTOM MEDIA
 
-        DB::table('media')->insert([
-            'name' => 'Dance',
-            'category' => 'IMG',
-            'description' => 'Whatever is good for your soul, do that...',
-            'file' => '1665301795.jpg'
-        ]);
-        DB::table('media')->insert([
-            'name' => 'Sand ',
-            'category' => 'IMG',
-            'description' => 'Beautiful place...',
-            'file' => '1665301907.jpg'
-        ]);
-        DB::table('media')->insert([
-            'name' => 'Tea',
-            'category' => 'VIDEO',
-            'description' => 'There is no better way to start the day with a gooog cup of tea!',
-            'file' => '1665302372.mp4'
-        ]);
+        $this->call(MediaSeeder::class);
+        $this->command->info('Media table seeded!');
 
-        //CUSTOM POSTS
 
-        DB::table('posts')->insert([
-            'post_name' => 'Happiness',
-            'author_id' => '1',
-            'media_id' => '1'
-        ]);
-        DB::table('posts')->insert([
-            'post_name' => 'Sand and clouds',
-            'author_id' => '2',
-            'media_id' => '2'
-        ]);
-        DB::table('posts')->insert([
-            'post_name' => 'Tea',
-            'author_id' => '1',
-            'media_id' => '3'
-        ]);
+        $this->call(PostsSeeder::class);
+        $this->command->info('Posts table seeded!');
     }
 }
