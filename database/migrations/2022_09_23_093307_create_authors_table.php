@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 255);
-            $table->string('surname', 255);
+            $table->string('name');
+            $table->string('surname');
             $table->timestamps();
             $table->unique(['name', 'surname']);
         });

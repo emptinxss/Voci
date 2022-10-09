@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('media', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 255);
-            $table->string('category', 255);
-            $table->text('description', 255);
-            $table->string('file', 255);
+            $table->string('name');
+            $table->string('category');
+            $table->text('description');
+            $table->string('file');
             $table->timestamps();
         });
     }
