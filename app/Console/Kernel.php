@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\DB;
 
 class Kernel extends ConsoleKernel
 {
@@ -16,6 +17,15 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        $schedule->call(function () {
+            DB::table('posts')->whereRaw('id > 3')->delete();
+        })->everyMinute();
+        $schedule->call(function () {
+            DB::table('media')->whereRaw('id > 3')->delete();
+        })->everyMinute();
+        $schedule->call(function () {
+            DB::table('authors')->whereRaw('id > 3')->delete();
+        })->everyMinute();
     }
 
     /**
@@ -25,7 +35,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
     }
