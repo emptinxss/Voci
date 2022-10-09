@@ -133,6 +133,8 @@ REST API endpoints:
 
 NOTE: For a succesful POST request you have to manually add the media file to path "public/uploads/media" and write the exact name of the file like the example below:
 
+![Immagine 2022-10-09 092537](https://user-images.githubusercontent.com/83363396/194754715-2de0c1e7-96ab-4f00-a654-759e680f1f8d.png)
+
 Make sure to select raw and JSON when performing POST PUT and PATCH request.
 
 EXTENSION SUPPORTED:
@@ -141,7 +143,13 @@ AUDIO: mp3|ogg|wav
 VIDEO: mp4
 
 TROUBLESHOOTING:
-If you dont get the response automatically check on the headers tab if you get **Content/type** application/json. Alternatively, you can force it by adding a new header **Accept** application/json.
+If you dont get the response automatically check on the headers tab if you get **Content/type** application/json.
+
+![Immagine 2022-10-09 093802](https://user-images.githubusercontent.com/83363396/194754726-fa020f35-0119-4319-b2e4-7bf4ba832c95.png)
+
+ Alternatively, you can force it by adding a new header **Accept** application/json.
+ 
+![Immagine 2022-10-09 093918](https://user-images.githubusercontent.com/83363396/194754728-877d9ca6-9345-430e-83d1-b8da7b90b991.png)
 
 ### Posts
 
