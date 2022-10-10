@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('media', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('category');
             $table->text('description');

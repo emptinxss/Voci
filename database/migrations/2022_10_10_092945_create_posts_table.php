@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('post_name', 255);
-            $table->foreignId('author_id');
-            $table->foreignId('media_id');
+            $table->string('post_name');
+            $table->foreignId('author_id')->constrained('authors')->onDelete('cascade');
+            $table->foreignId('media_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

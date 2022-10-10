@@ -16,14 +16,9 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call(AuthorsSeeder::class);
-        $this->command->info('Authors table seeded!');
-
 
         $this->call(MediaSeeder::class);
-        $this->command->info('Media table seeded!');
-
 
         $this->call(PostsSeeder::class);
-        $this->command->info('Posts table seeded!');
     }
 }
