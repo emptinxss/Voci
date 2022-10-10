@@ -33,7 +33,6 @@ Assuming all that, the main goal is to create a REST API to execute CRUD operati
 -   [Laravel](https://laravel.com/)
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [MySQL](https://www.mysql.com/it/downloads/)
--   [XAMPP](https://www.apachefriends.org/it/index.html)
 
 ## Getting Started
 
@@ -43,18 +42,20 @@ Follow these steps to try the REST API in local. (RECOMMENDED)
 
 Please check the official laravel installation guide for requirements before you start. [Official Documentation](https://laravel.com/docs/9.x/installation)
 
+If you need to install [Git](https://git-scm.com/downloads)
+
 ### Installation
 
 1. Clone the repository locally with the git command:
 
     ```sh
-    git clone
+    git clone https://github.com/emptinxss/Voci.git
     ```
 
 2. Switch to the project folder:
 
     ```sh
-    cd
+    cd voci
     ```
 
 3. Install composer dependencies:
@@ -133,7 +134,8 @@ REST API endpoints:
 -   **PATCH** /api/v1/media/{id}
 -   **DELETE** /api/v1/media/{id}
 
-<span style="color:red">**NOTE**</span>: For a succesful POST request you have to manually add the media file to path "public/uploads/media" and write the exact name of the file like the example below:
+> **Note**
+> For a succesful POST request you have to manually add the media file to path "public/uploads/media" and write the exact name of the file like the example below:
 
 ![Immagine 2022-10-09 092537](https://user-images.githubusercontent.com/83363396/194754715-2de0c1e7-96ab-4f00-a654-759e680f1f8d.png)
 
