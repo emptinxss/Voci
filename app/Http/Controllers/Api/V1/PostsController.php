@@ -33,10 +33,10 @@ class PostsController extends Controller
 
             if (count($filteredAuthor) > 0) {
 
-                return $response->succResponse($filteredAuthor, "Authors Successfully Found.");
+                return $response->succResponse($filteredAuthor, "Posts Successfully Found.");
             } else {
 
-                return $response->succResponse($filteredAuthor, "NOT FOUND. Author's list is empty.", 404);
+                return $response->succResponse($filteredAuthor, "NOT FOUND. Posts  list is empty.", 404);
             }
         }
     }

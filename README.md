@@ -37,9 +37,9 @@ Assuming all that, the main goal is to create a REST API to execute CRUD operati
 
 ## Getting Started
 
-You can try the visual online site [here]()
+You can try the visual online site [here](http://voci-media.herokuapp.com/) (Any new data will be deleted every hour for testing and storing reasons )
 
-or follow these steps to try the API in local. (RECOMMENDED)
+Follow these steps to try the REST API in local. (RECOMMENDED)
 
 Please check the official laravel installation guide for requirements before you start. [Official Documentation](https://laravel.com/docs/9.x/installation)
 
@@ -69,7 +69,7 @@ Please check the official laravel installation guide for requirements before you
     npm install
     ```
 
-5. Copy the example env file and make the required configuration changes in the .env file:
+5. Copy the example env file and make the required configuration changes in .env file:
 
 ```sh
  cp .env.example .env
@@ -107,6 +107,8 @@ Please check the official laravel installation guide for requirements before you
 
 You can now access the server at http://localhost:8000
 
+You will find the REST API at http://localhost:8000/api/v1/ (then use the endpoints below)
+
 ## Usage
 
 Raccomended tool to try the requests. [Postman](https://www.postman.com/)
@@ -131,7 +133,7 @@ REST API endpoints:
 -   **PATCH** /api/v1/media/{id}
 -   **DELETE** /api/v1/media/{id}
 
-NOTE: For a succesful POST request you have to manually add the media file to path "public/uploads/media" and write the exact name of the file like the example below:
+<span style="color:red">**NOTE**</span>: For a succesful POST request you have to manually add the media file to path "public/uploads/media" and write the exact name of the file like the example below:
 
 ![Immagine 2022-10-09 092537](https://user-images.githubusercontent.com/83363396/194754715-2de0c1e7-96ab-4f00-a654-759e680f1f8d.png)
 
@@ -165,28 +167,28 @@ Alternatively, you can force it by adding a new header **Accept** application/js
 
 You can filter by **KEY** with [eq] that rappresent '=' or [lk] that means 'like', or including the posts related to the **authors** or **media**.
 
-**GET** request: filter authors by name that must be euqal to the value [eq] => '='
+**GET** request : filter posts by name that must be euqal to the value [eq] => '='
 
 ```sh
-   /api/v1/posts?post_name[eq]=Emma
+   /api/v1/posts?post_name[eq]=happiness
 ```
 
-**GET** request : filter media by surname that contains the value [lk] => 'like'
+**GET** request : filter media by description that contains the value [lk] => 'like'
 
 ```sh
    /api/v1/media?description[lk]=%good%
 ```
 
-**GET** author filter request by including the posts related, u must use **&** to add another query.
+**GET** request : filter authors by including the posts related, u must use **&** to add another query.
 
 ```sh
-   /api/v1/author?surname[eq]=Jackson&includePosts=true
+   /api/v1/authors?surname[eq]=Jackson&includePosts=true
 ```
 
 ## Links
 
--   Test my app on []()
--   My other projects [Github]()
+-   Test my app on [Heroku](http://voci-media.herokuapp.com/posts)
+-   My other projects [Github](https://github.com/emptinxss)
 
 ## License
 

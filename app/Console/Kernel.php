@@ -19,8 +19,8 @@ class Kernel extends ConsoleKernel
 
         //reset database
 
-        $schedule->exec('php artisan migrate:fresh --seed')
-            ->everyMinute();
+        /*         $schedule->exec('php artisan migrate:fresh --seed')
+            ->daily(); */
     }
 
     /**
