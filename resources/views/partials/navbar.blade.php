@@ -8,11 +8,12 @@
             </div>
 
             <div class="items-center justify-end md:flex md:flex-1 lg:w-0 ">
-                <a href="/posts" class="whitespace-nowrap text-base font-medium text-black-500 hover:underline">POSTS</a>
+                <a href="/posts"
+                    class="whitespace-nowrap text-base sm:font-medium text-black-500 hover:underline">POSTS</a>
                 <a href="/media"
-                    class="whitespace-nowrap text-base font-medium text-black-500 hover:underline ml-4">MEDIA</a>
+                    class="whitespace-nowrap text-base sm:font-medium text-black-500 hover:underline ml-4">MEDIA</a>
                 <a href="/authors"
-                    class="whitespace-nowrap text-base font-medium text-black-500 hover:underline ml-4">AUTHORS</a>
+                    class="whitespace-nowrap text-base sm:font-medium text-black-500 hover:underline ml-4">AUTHORS</a>
             </div>
         </div>
     </div>

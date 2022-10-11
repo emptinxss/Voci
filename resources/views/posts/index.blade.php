@@ -4,13 +4,13 @@
 @endsection
 
 @section('content')
-    <div style="width: 900px;" class=" container max-w-full mx-auto pt-4">
+    <div style="width: 900px;" class="sm:container max-w-full  mx-auto pt-4">
         <h1 class="text-4xl mb-4 text-center dosis">Posts</h1>
 
         @include('partials.messages')
         <div class="flex justify-between">
             <a href="/posts/create"
-                class=" mb-4 bg-blue-500 tracking-wide text-white px-6 py-2 inline-block mb-6 rounded hover:shadow-lg">Add
+                class=" py-2 bg-blue-500 tracking-wide text-white px-6 inline-block  mb-auto rounded hover:shadow-lg">Add
                 post</a>
             @include('partials.search')
 
@@ -23,12 +23,13 @@
         @foreach ($posts as $post)
             <article class=" mb-2 text-center border border-gray-100">
                 <a href="/posts/{{ $post->id }}/edit">
-                    <div class="p-2 ">
+                    <div class="p-2">
 
 
 
 
-                        <span class="text-md font-bold text-blue-500">{{ ucfirst($post->post_name) }}</span>
+                        <span class="text-md font-bold text-blue-500">
+                            {{ ucfirst($post->post_name) }}</span>
 
 
 
@@ -46,8 +47,7 @@
                             {{-- FOTO --}}
                             @if ($post->media_id === $media->id ? preg_match('(jpg|png|jpeg|gif)', $media->file) : null)
                                 <div class="flex justify-center">
-                                    <img src="uploads/media/{{ $media->file }}" class="max-w-4xl"
-                                        style="max-width: 356px" />
+                                    <img src="uploads/media/{{ $media->file }}" class="max-w-4xl w-52 md:w-96" />
                                 </div>
                             @endif
 
@@ -65,7 +65,7 @@
                             {{-- VIDEO --}}
                             @if ($post->media_id === $media->id ? preg_match('(mp4)', $media->file) : null)
                                 <div class="flex justify-center">
-                                    <video class="max-w-4xl max-h-fit" style="max-width: 356px" controls>
+                                    <video class="max-w-4xl max-h-fit w-52 md:w-96" controls>
                                         <source src="uploads/media/{{ $media->file }}">
                                     </video>
                                 </div>
