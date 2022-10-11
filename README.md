@@ -82,7 +82,7 @@ If you need to install [Git](https://git-scm.com/downloads)
  php artisan key:generate
 ```
 
-7.  Create an empty database for our application with your preferred tools (ex. phpMyAdmin or MySQL Workbench)
+7.  Create an empty database for our application with your preferred tools (recommended [XAMPP](https://www.apachefriends.org/it/index.html), phpMyAdmin or MySQL Workbench)
 
 8.  In the .env file, add database information to allow Laravel to connect to the database
 
