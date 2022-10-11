@@ -42,20 +42,20 @@
                             @endif
                         @endforeach
 
-
+                        {{-- FOTO --}}
                         @foreach ($medias as $media)
-                            {{-- FOTO --}}
-                            @if ($post->media_id === $media->id ? preg_match('(jpg|png|jpeg|gif)', $media->file) : null)
+                            @if ($post->media_id === $media->id ? preg_match('(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)', $media->file) : null)
                                 <div class="flex justify-center">
-                                    <img src="uploads/media/{{ $media->file }}" class="max-w-4xl w-52 md:w-96" />
+                                    <img src="uploads/media/{{ $media->file }}"
+                                        class="max-w-4xl w-52 md:w-96 cursor-default media" />
                                 </div>
                             @endif
 
                             {{-- AUDIO --}}
-                            @if ($post->media_id === $media->id ? preg_match('(mp3|ogg|wav)', $media->file) : null)
+                            @if ($post->media_id === $media->id ? preg_match('(mp3|ogg|wav|MP3|OGG|WAV)', $media->file) : null)
                                 <div class="flex
                                         justify-center">
-                                    <audio controls>
+                                    <audio class="cursor-default media" controls>
                                         <source src="uploads/media/{{ $media->file }}">
                                     </audio>
                                 </div>
@@ -63,9 +63,10 @@
 
 
                             {{-- VIDEO --}}
-                            @if ($post->media_id === $media->id ? preg_match('(mp4)', $media->file) : null)
-                                <div class="flex justify-center">
-                                    <video class="max-w-4xl max-h-fit w-52 md:w-96" controls>
+                            @if ($post->media_id === $media->id ? preg_match('(mp4|MP4)', $media->file) : null)
+                                <div class="flex justify-center ">
+                                    <video class="max-w-4xl max-h-fit w-52 md:w-96 cursor-default media" controls
+                                        playsinline autoplay>
                                         <source src="uploads/media/{{ $media->file }}">
                                     </video>
                                 </div>
