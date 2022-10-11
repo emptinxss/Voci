@@ -190,7 +190,7 @@ You can filter by **KEY** with [eq] that rappresent '=' or [lk] that means 'like
 ## Links
 
 -   Test my app on [Heroku](http://voci-media.herokuapp.com/posts)
--   My other projects [Github](https://github.com/emptinxss)
+-   My other projects on [Github](https://github.com/emptinxss)
 
 ## License
 
