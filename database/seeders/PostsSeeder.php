@@ -18,24 +18,24 @@ class PostsSeeder extends Seeder
 
         Post::create([
             'post_name' => 'Happiness',
-            'author_id' => '4',
-            'media_id' => '4',
+            'author_id' => '1',
+            'media_id' => '1',
             'created_at' => date('Y-m-d H:i:s'),
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
         Post::create([
             'post_name' => 'Sand and clouds',
-            'author_id' => '14',
-            'media_id' => '14',
+            'author_id' => '2',
+            'media_id' => '2',
             'created_at' => date('Y-m-d H:i:s'),
             'created_at' => date('Y-m-d H:i:s')
 
         ]);
         Post::create([
             'post_name' => 'Tea',
-            'author_id' => '4',
-            'media_id' => '24',
+            'author_id' => '1',
+            'media_id' => '3',
             'created_at' => date('Y-m-d H:i:s'),
             'created_at' => date('Y-m-d H:i:s')
         ]);
