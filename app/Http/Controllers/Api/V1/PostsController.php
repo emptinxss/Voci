@@ -9,11 +9,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\PostsResource;
 use App\Http\Resources\V1\PostsCollection;
 use App\Filters\V1\PostsFilter;
-
 use App\Http\Controllers\Api\V1\ResponseController;
-
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Str;
+
 
 class PostsController extends Controller
 {
@@ -24,20 +22,16 @@ class PostsController extends Controller
         $filter = new PostsFilter();
         $filterItems = $filter->transform($request);
 
-        if (count($filterItems) == 0) {
-            return new PostsCollection(Post::paginate());
+        $posts = Post::where($filterItems)->paginate();
+
+        $filteredPosts = new PostsCollection($posts->appends($request->query())); //append filter on the link pages
+
+        if (count($filteredPosts) > 0) {
+
+            return $response->succResponse($filteredPosts, "Media Successfully Found.");
         } else {
-            $posts = Post::where($filterItems)->paginate();
 
-            $filteredAuthor =  new PostsCollection($posts->appends($request->query())); //append filter on the link pages
-
-            if (count($filteredAuthor) > 0) {
-
-                return $response->succResponse($filteredAuthor, "Posts Successfully Found.");
-            } else {
-
-                return $response->succResponse($filteredAuthor, "NOT FOUND. Posts  list is empty.", 404);
-            }
+            return $response->succResponse($filteredPosts, "NOT FOUND. media list is empty.", 404);
         }
     }
 
