@@ -33,6 +33,7 @@ Assuming all that, the main goal is to create a REST API to execute CRUD operati
 -   [Laravel](https://laravel.com/)
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [MySQL](https://www.mysql.com/it/downloads/)
+-   [AlpineJs](https://alpinejs.dev)
 
 ## Getting Started
 
