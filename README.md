@@ -37,8 +37,6 @@ Assuming all that, the main goal is to create a REST API to execute CRUD operati
 
 ## Getting Started
 
-You can try the visual online site [here](http://voci-media.herokuapp.com/) (Any new data will be deleted every hour for testing and storing reasons )
-
 Follow these steps to try the REST API in local. (RECOMMENDED)
 
 Please check the official laravel installation guide for requirements before you start. [Official Documentation](https://laravel.com/docs/9.x/installation)
@@ -190,8 +188,6 @@ You can filter by **KEY** with [eq] that rappresent '=' or [lk] that means 'like
 
 ## Links
 
--   Test my app on [Heroku](http://voci-media.herokuapp.com/posts)
--   Try online API [Here](http://voci-media.herokuapp.com/api/v1/posts) (POST media request available only in local)
 -   My other projects on [Github](https://github.com/emptinxss)
 
 ## License
